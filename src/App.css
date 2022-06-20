@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+* {
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HEADER CSS */
+.App-header {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 500;
+  font-family: "Roboto Slab", serif;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 415px) {
+  .App-header {
+    padding: 16px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* GRID CSS */
+.App-grid {
+  font-size: 15px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-family: "Roboto Slab", serif;
+}
+
+.wordle-grid {
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
+}
+
+.wordle-grid-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.wordle-grid-letter {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: solid 1px white;
+  padding: 10px;
+  margin: 5px;
+  width: 20px;
+  height: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.wordle-grid-letter-true{
+  background-color: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.keyboard-grid{
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Slab", serif;
 }
+
+.keyboard-row{
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.wordle-grid-letter{
+border-radius: 25%;
+font-size: 15px;
+}
+
+.wordle-grid-letter:hover:hover,
+.wordle-grid-letter:hover:focus { 
+  transition: 0.15s;
+  background:rgb(20, 136, 171);
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
