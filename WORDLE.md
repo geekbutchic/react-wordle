@@ -103,8 +103,8 @@ Practice react fundamentals by creating a Wordle Clone
     * This state variable will be a string defaulted to "playing". This variable represents the current state of our game as the user is playing. This variable can have 3 possible values: "playing", "won", "lost". ✅
 * Implement the following as functions inside the <App> component with the described functionality.
 * handleKeyPress(key){} ✅
-  * This function should be invoked when the user either types a letter or clicks one of the buttons on the keyboard besides "enter" and "backspace". 
-  * When invoked, handleKeyPress should update wordleGuessList with the inputted letter at the indexes of wordleGuessIndex and wordleLetterIndex. 
+  * This function should be invoked when the user either types a letter or clicks one of the buttons on the keyboard besides "enter" and "backspace". ✅
+  * When invoked, handleKeyPress should update wordleGuessList with the inputted letter at the indexes of wordleGuessIndex and wordleLetterIndex. ✅
   * Additionally, this function should increment wordleLetterIndex by 1 unless wordleLetterIndex has a value greater than or equal to 4.
   * I.E. If the user enters the letter "a" and they are guessing the second letter of the third word in the guess list, wordleLetterIndex should be 2 and wordleGuessIndex should be 3. That empty string in wordleGuessList should be set to the letter "a". Addtionally, wordleLetterIndex should be incremented to 3. If the user is attempting to enter a letter and the wordleLetterIndex is already at 4, I.E. we have reached the end of our word, this function should do nothing else.
 * handleBackspace(){}

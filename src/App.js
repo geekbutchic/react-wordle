@@ -18,7 +18,6 @@ const keyList = [
 ]
 
 function useKeyPress(targetKey, handler) {
-
   const upHandler = ({ key }) => {
     console.log(key)
     if (key === targetKey) {
@@ -103,7 +102,7 @@ const WordleGrid = (props) => {
   )
 }
 
-const WordleGridRow = (props) => {
+const WordleGridRow = (props) => { 
   return (
     <div
     className="wordle-grid-row"
