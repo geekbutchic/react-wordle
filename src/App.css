@@ -56,9 +56,6 @@
   height: 30px;
 }
 
-.wordle-grid-letter-true{
-  background-color: green;
-}
 
 .keyboard-grid{
   color:white;
@@ -88,3 +85,14 @@ font-size: 15px;
   transform: translateY(-0.25em);
 }
 
+.wordle-grid-letter-true{
+  background-color: green;
+}
+
+.wordle-grid-letter-false{
+  background-color: grey;
+}
+
+#wordle-grid-letter-E{
+  background-color: yellow;
+}

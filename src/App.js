@@ -4,7 +4,7 @@ import './App.css';
 
 const defaultGuessList = [
   ["R", "E", "A", "C", "T"],
-  ["", "", "", "", ""],
+  ["R", "E", "A", "C", "T"],
   ["", "", "", "", ""],
   ["", "", "", "", ""],
   ["", "", "", "", ""],
@@ -91,11 +91,10 @@ const WordleGrid = (props) => {
     >
       {props.wordleGuessList.map((wordleGuess, index)=>{
         return (
-          <div
-          key={`${wordleGuess}-${index}`}
-          >
-          <WordleGridRow wordleGuess={wordleGuess}/> 
-          </div>
+          <WordleGridRow 
+          key={`${wordleGuess} ${index}`}
+          wordleGuess={wordleGuess}
+          /> 
         )
       })} 
     </div>
@@ -109,11 +108,10 @@ const WordleGridRow = (props) => {
     >
       {props.wordleGuess.map((wordleLetter, index)=>{
         return (
-          <div
+          <WordleGridLetter 
           key={`${wordleLetter}-${index}`}
-          >
-          <WordleGridLetter wordleLetter={wordleLetter} isCorrect={wordleLetter === "A" || wordleLetter === "E"}/> 
-          </div>
+          wordleLetter={wordleLetter} 
+          isCorrect={wordleLetter === "A" || wordleLetter === "E"}/> 
         )
       })}
     </div>
@@ -122,7 +120,10 @@ const WordleGridRow = (props) => {
 
 const WordleGridLetter = (props) => {
   return (
-    <div className={`wordle-grid-letter wordle-grid-letter-${props.isCorrect}`}>
+    <div 
+    id={`wordle-grid-letter-${props.wordleLetter}`} 
+    className={`wordle-grid-letter wordle-grid-letter-${props.isCorrect}`}
+    >
       {props.wordleLetter}
     </div>
   )
@@ -164,9 +165,12 @@ const KeyboardRow = (props) => {
 
 const KeyboardLetter = (props) => {
   return (
-    <div className="wordle-grid-letter" onClick={()=>{
+    <div 
+    className="wordle-grid-letter" 
+    onClick={()=>{
       props.handleKeyPress(props.letter)
-    }}>
+    }}
+    >
       {props.letter}
     </div>
   )
